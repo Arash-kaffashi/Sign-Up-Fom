@@ -1,0 +1,138 @@
+@font-face {
+	font-family: Norse;
+	src: url("static/Norse-Bold.otf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 16px;
+	--image: url("static/burger.jpg");
+	--odin-image: url("static/odin-lined.png");
+}
+
+.app {
+	--appGap: 2rem;
+
+	display: flex;
+	min-height: 100vh;
+	gap: var(--appGap);
+}
+
+aside.image {
+	--odinSize: 5rem;
+
+	flex: 0 1 640px;
+	background: var(--image) no-repeat;
+	background-size: auto;
+	background-position: center;
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	color: white;
+}
+
+aside.image h1 {
+	font-family: Norse, "Courier New", Courier, monospace;
+	font-size: var(--odinSize);
+}
+
+aside.image img {
+	height: var(--odinSize);
+}
+
+aside.image a {
+	color: white;
+}
+
+aside.image .logo {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(0, 0, 0, 0.3);
+	margin-top: 10rem;
+}
+
+.credits {
+	text-align: center;
+}
+
+.app > main {
+	--gap: 1.5rem;
+
+	flex: 1 1 auto;
+	font-family: Arial, Helvetica, sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--appGap);
+}
+
+main > .hero {
+	max-width: 50vw;
+
+	margin-top: 5rem;
+	font-weight: bolder;
+	font-size: 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
+main > form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--gap);
+
+	max-width: 50vw;
+}
+
+.shadow > h1,
+.account {
+	flex: 1 1 100%;
+}
+
+.shadow {
+	box-shadow: 0px 10px 3px -5px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	border-style: none;
+
+	margin: 0 calc(-50vw + min(640px, 50vw) + 2rem) 0 -2rem;
+	padding: 1rem calc(50vw - min(640px, 50vw) - 2rem) 1rem 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gap);
+	justify-content: space-between;
+}
+
+.input {
+	flex: 0 1 40%;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.input > label {
+	font-size: 0.5rem;
+}
+
+.account > input {
+	color: white;
+	padding: 0.5rem 2rem;
+	border-radius: 5px;
+	background-color: #596d48;
+	font-weight: bold;
+	border-style: none;
+	box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+
+	transition: all 0.1s;
+}
+
+.account > input:active {
+	transform: translateY(3px);
+	box-shadow: none;
+}
