@@ -45,15 +45,25 @@
 						</div>
 						<div class="input">
 							<label for="email">EMAIL</label>
-							<input type="text" id="email" placeholder="" />
+							<input type="email" id="email" placeholder="" />
 						</div>
 						<div class="input">
 							<label for="phone">PHONE NUMBER</label>
-							<input type="text" id="phone" placeholder="" />
+							<input
+								type="text"
+								id="phone"
+								pattern="\(\d{2}\)\s\d\.\d{4}-\d{4}"
+								placeholder=""
+							/>
 						</div>
 						<div class="input">
 							<label for="pass">PASSWORD</label>
-							<input type="text" id="pass" placeholder="" />
+							<input
+								type="text"
+								id="pass"
+								pattern="(?=.*\p{Lu})(?=.*\p{Ll})(?=.*\p{N})(?=.*[!@#$%^&*_])[\p{L}\p{N}!@#$%^&*_]{8,}"
+								placeholder=""
+							/>
 						</div>
 						<div class="input">
 							<label for="confirm">CONFIRM PASSWORD</label>
@@ -70,4 +80,5 @@
 			</main>
 		</div>
 	</body>
+	<script src="index.js"></script>
 </html>

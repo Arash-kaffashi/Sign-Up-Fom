@@ -113,6 +113,7 @@ main > form {
 	flex: 0 1 40%;
 	display: flex;
 	flex-flow: column wrap;
+	gap: 5px;
 }
 
 .input > label {
@@ -135,4 +136,24 @@ main > form {
 .account > input:active {
 	transform: translateY(3px);
 	box-shadow: none;
+}
+
+.input > input {
+	border: 1px #e5e7eb solid;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding: 5px;
+	outline-color: blue;
+}
+
+.input > input:invalid {
+	border: 1px red solid;
+}
+
+.input > input:focus:invalid {
+	outline-color: red;
+}
+
+.input > input:focus {
+	box-shadow: 0px 5px 3px -2.5px rgba(0, 0, 0, 0.1);
 }
