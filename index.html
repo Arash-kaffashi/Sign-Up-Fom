@@ -16,9 +16,7 @@
 				</div>
 				<div class="credits">
 					Photo by
-					<a target="_blank" href="https://unsplash.com/@longlitsense"
-						>Dimitar Krastev</a
-					>
+					<a target="_blank" href="https://unsplash.com/@longlitsense">Dimitar Krastev</a>
 					on
 					<a target="_blank" href="https://unsplash.com/">Unsplash</a>
 				</div>
@@ -26,8 +24,7 @@
 			<main>
 				<div class="hero">
 					<p>
-						This is not a real online service! You know you need something like
-						this in our life to help you realize your deepest dreams.<br />
+						This is not a real online service! You know you need something like this in our life to help you realize your deepest dreams.<br />
 						<span>Sing up <i>now</i> to get started.</span>
 					</p>
 					<p>You know you want to.</p>
@@ -49,25 +46,27 @@
 						</div>
 						<div class="input">
 							<label for="phone">PHONE NUMBER</label>
-							<input
-								type="text"
-								id="phone"
-								pattern="\(\d{2}\)\s\d\.\d{4}-\d{4}"
-								placeholder=""
-							/>
+							<input type="text" id="phone" pattern="\(\d{2}\)\s\d\.\d{4}-\d{4}" placeholder="" />
 						</div>
-						<div class="input">
+						<div class="input pass">
 							<label for="pass">PASSWORD</label>
 							<input
-								type="text"
+								type="password"
 								id="pass"
 								pattern="(?=.*\p{Lu})(?=.*\p{Ll})(?=.*\p{N})(?=.*[!@#$%^&*_])[\p{L}\p{N}!@#$%^&*_]{8,}"
 								placeholder=""
 							/>
+							<div class="rules">
+								<span class="uper"><input type="checkbox" id="uper" disabled /> At least one Letter in uppercase</span>
+								<span class="lower"><input type="checkbox" id="lower" disabled /> At least one Letter in lowercase</span>
+								<span class="number"><input type="checkbox" id="number" disabled /> At least one Number</span>
+								<span class="symbol"><input type="checkbox" id="symbol" disabled /> At least one Symbol: ! @ # $ % ^ & * _</span>
+								<span class="eight"> <input type="checkbox" id="eight" disabled /> Length of at least eight characters </span>
+							</div>
 						</div>
 						<div class="input">
 							<label for="confirm">CONFIRM PASSWORD</label>
-							<input type="text" id="confirm" placeholder="" />
+							<input type="password" id="confirm" placeholder="" />
 						</div>
 					</div>
 					<div class="account">

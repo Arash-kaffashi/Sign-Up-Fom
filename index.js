@@ -39,3 +39,18 @@ document.getElementById("phone").addEventListener("input", function (e) {
 	pos += difference;
 	this.setSelectionRange(pos, pos);
 });
+
+document.getElementById("pass").addEventListener("input", function (e) {
+	let value = this.value;
+	const rules = {
+		uper: /\p{Lu}/u,
+		lower: /\p{Ll}/u,
+		number: /\p{N}/u,
+		symbol: /[!@#$%^&*_]/,
+		eight: /.{8,}/,
+	};
+
+	for (let key in rules) {
+		document.getElementById(key).checked = rules[key].test(value);
+	}
+});
