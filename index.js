@@ -54,5 +54,6 @@ document.getElementById("pass").addEventListener("input", function (e) {
 });
 
 document.querySelector("form").addEventListener("submit", function (e) {
+	e.target.checkValidity();
 	e.preventDefault();
 });

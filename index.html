@@ -34,28 +34,23 @@
 						<h1>Let's do this!</h1>
 						<div class="input">
 							<label for="firstName">FIRST NAME</label>
-							<input type="text" id="firstName" placeholder="Thor" />
+							<input type="text" id="firstName" placeholder="Thor" required />
 						</div>
 						<div class="input">
 							<label for="lastName">LAST NAME</label>
-							<input type="text" id="lastName" placeholder="Odinson" />
+							<input type="text" id="lastName" placeholder="Odinson" required />
 						</div>
 						<div class="input">
 							<label for="email">EMAIL</label>
-							<input type="email" id="email" placeholder="" />
+							<input type="email" id="email" placeholder="your best e-mail" required />
 						</div>
 						<div class="input">
 							<label for="phone">PHONE NUMBER</label>
-							<input type="text" id="phone" pattern="\(\d{2}\)\s\d\.\d{4}-\d{4}" placeholder="" />
+							<input type="text" id="phone" pattern="\(\d{2}\)\s\d\.\d{4}-\d{4}" placeholder="e.g. (00) 0.0000-0000" required />
 						</div>
 						<div class="input pass">
 							<label for="pass">PASSWORD</label>
-							<input
-								type="password"
-								id="pass"
-								pattern="(?=.*\p{Lu})(?=.*\p{Ll})(?=.*\p{N})(?=.*[!@#$%^&*_])[\p{L}\p{N}!@#$%^&*_]{8,}"
-								placeholder=""
-							/>
+							<input type="password" id="pass" pattern="(?=.*\p{Lu})(?=.*\p{Ll})(?=.*\p{N})(?=.*[!@#$%^&*_])[\p{L}\p{N}!@#$%^&*_]{8,}" required />
 							<div class="rules">
 								<span class="uper"><input type="checkbox" id="uper" disabled /> At least one Letter in uppercase</span>
 								<span class="lower"><input type="checkbox" id="lower" disabled /> At least one Letter in lowercase</span>
@@ -66,7 +61,7 @@
 						</div>
 						<div class="input">
 							<label for="confirm">CONFIRM PASSWORD</label>
-							<input type="password" id="confirm" placeholder="" />
+							<input type="password" id="confirm" placeholder="" required />
 						</div>
 					</div>
 					<div class="account">
