@@ -122,7 +122,7 @@ main > form {
 	font-size: 0.5rem;
 }
 
-.account > input {
+.account > button {
 	color: white;
 	padding: 0.5rem 2rem;
 	border-radius: 5px;
@@ -135,7 +135,7 @@ main > form {
 	transition: all 0.1s;
 }
 
-.account > input:active {
+.account > button:active {
 	transform: translateY(3px);
 	box-shadow: none;
 }
