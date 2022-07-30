@@ -54,6 +54,11 @@ document.getElementById("pass").addEventListener("input", function (e) {
 });
 
 document.querySelector("form").addEventListener("submit", function (e) {
-	e.target.checkValidity();
 	e.preventDefault();
+	let notification = document.querySelector(".notification");
+
+	notification.classList.add("animate-notification");
+	setTimeout(() => {
+		notification.classList.remove("animate-notification");
+	}, 2 * 1_000);
 });
