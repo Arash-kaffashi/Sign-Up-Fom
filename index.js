@@ -21,9 +21,7 @@ function deserializePhone(string) {
 document.getElementById("confirm").addEventListener("input", function (e) {
 	let pass = document.getElementById("pass").value;
 
-	this.setCustomValidity(
-		pass != this.value ? "Passwords must be matching" : ""
-	);
+	this.setCustomValidity(pass != this.value ? "Passwords must be matching" : "");
 });
 
 document.getElementById("phone").addEventListener("input", function (e) {
@@ -53,4 +51,8 @@ document.getElementById("pass").addEventListener("input", function (e) {
 	for (let key in rules) {
 		document.getElementById(key).checked = rules[key].test(value);
 	}
+});
+
+document.querySelector("form").addEventListener("submit", function (e) {
+	e.preventDefault();
 });
